@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI School Helper</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🎓 AI School Helper</h1>
+<button onclick="toggleDark()">🌙</button>
+</header>
+
+<div class="dashboard">
+
+<nav class="sidebar">
+
+<button onclick="showTab('tutor')">🤖 AI Tutor</button>
+<button onclick="showTab('math')">🧮 Math Solver</button>
+<button onclick="showTab('quiz')">📝 Quiz Generator</button>
+<button onclick="showTab('flashcards')">🧠 Flashcards</button>
+<button onclick="showTab('planner')">📅 Study Planner</button>
+<button onclick="showTab('progress')">📊 Progress</button>
+<button onclick="showTab('notes')">📄 Notes</button>
+
+</nav>
+
+<main>
+
+<section id="tutor" class="tab">
+
+<h2>AI Tutor</h2>
+
+<input id="question" placeholder="Ask a question">
+
+<button onclick="askAI()">Search</button>
+
+<div class="card" id="answer"></div>
+
+<button onclick="copyNotes()">Copy for Notes</button>
+
+</section>
+
+<section id="math" class="tab">
+
+<h2>Math Solver</h2>
+
+<input id="mathInput" placeholder="Example: 2+2*5">
+
+<button onclick="solveMath()">Solve</button>
+
+<div class="result" id="mathAnswer"></div>
+
+<button onclick="copyMath()">Copy Result</button>
+
+</section>
+
+<section id="quiz" class="tab">
+
+<h2>Quiz Generator</h2>
+
+<input id="quizTopic" placeholder="Topic">
+
+<button onclick="generateQuiz()">Generate</button>
+
+<div id="quizArea"></div>
+
+</section>
+
+<section id="flashcards" class="tab">
+
+<h2>Flashcards</h2>
+
+<input id="flashTopic" placeholder="Topic">
+
+<button onclick="makeFlashcards()">Create</button>
+
+<div id="flashArea" class="flashGrid"></div>
+
+</section>
+
+<section id="planner" class="tab">
+
+<h2>Study Planner</h2>
+
+<input id="task" placeholder="Study task">
+
+<button onclick="addTask()">Add</button>
+
+<ul id="taskList"></ul>
+
+</section>
+
+<section id="progress" class="tab">
+
+<h2>Progress</h2>
+
+<div class="progressBar">
+<div id="xpBar"></div>
+</div>
+
+<p id="progressStats"></p>
+
+</section>
+
+<section id="notes" class="tab">
+
+<h2>Export Notes</h2>
+
+<textarea id="noteExport"></textarea>
+
+<button onclick="copyAllNotes()">Copy Notes</button>
+
+</section>
+
+</main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
